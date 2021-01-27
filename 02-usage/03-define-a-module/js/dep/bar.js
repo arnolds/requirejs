@@ -1,0 +1,3 @@
+define({
+	message: 'Goobye, World!'
+});

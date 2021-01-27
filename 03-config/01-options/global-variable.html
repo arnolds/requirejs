@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Configuration options</title>
+	<script>
+		var require = {
+			baseUrl: 'js',
+			deps: [
+				'foo',
+				'bar'
+			],
+			callback: function (foo, bar) {
+				console.log(foo, bar);
+			}
+		};
+	</script>
+	<script src="js/require.js"></script>
+</head>
+<body>
+	
+</body>
+</html>

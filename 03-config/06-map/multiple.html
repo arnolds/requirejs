@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Configuration options</title>
+	<script src="js/require.js"></script>	
+</head>
+<body>		
+	<script>
+		require.config({
+			baseUrl: 'js/multiple',
+			map: {
+				'*': {
+					'lib': 'lib/v1.0'
+				},
+				'bar': {
+					'lib': 'lib/v2.0'
+				},
+				'baz': {
+					'lib': 'lib/v3.0'
+				}
+			}
+		});
+
+		require([
+			'foo',
+			'bar',
+			'baz'
+		], function (foo, bar, baz) {
+			console.log(`foo: ${foo.version}`); // foo: v1.0
+			console.log(`bar: ${bar.version}`); // bar: v2.0
+			console.log(`baz: ${baz.version}`); // baz: v3.0
+		});
+	</script>
+</body>
+</html>

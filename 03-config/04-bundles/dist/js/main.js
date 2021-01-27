@@ -1,0 +1,1 @@
+require.config({baseUrl:"js",bundles:{primary:["foo","bar"],secondary:["baz"]}}),require(["foo","bar","baz"],function(o,e,r){console.log(o),console.log(e),console.log(r)});

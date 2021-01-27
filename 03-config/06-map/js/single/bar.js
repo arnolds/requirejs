@@ -1,0 +1,3 @@
+define({
+	message: 'Hello, Goodbye!'
+});

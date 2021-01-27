@@ -1,0 +1,1 @@
+define("baz",{message:"Hello, Baz!"}),define("secondary",function(){});

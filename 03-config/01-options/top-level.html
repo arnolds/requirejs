@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Configuration options</title>	
+</head>
+<body>
+	<script src="js/require.js"></script>
+	<script>
+		require.config({
+			baseUrl: '/path/to/',
+			paths: {
+				'some': 'some/v1.0'
+			},
+			waitSeconds: 15
+		});
+
+		require([
+			'some/foo',
+			'some/bar',
+			'a.js',
+			'b.js'
+		], function (foo, bar) {
+			// /path/to/some/v1.0/foo
+			// /path/to/some/v1.0/bar
+			// a.js
+			// b.js
+		});
+	</script>
+</body>
+</html>

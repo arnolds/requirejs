@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Configuration options</title>
+	<script src="js/require.js"></script>	
+</head>
+<body>
+	<script>
+		require.config({
+			baseUrl: 'js',
+			waitSeconds: 10,
+			paths: {
+				foo: [
+					'https://example.org/foo',
+					'foo'
+				]
+			}
+		});
+
+		require(['foo'], function (foo) {
+			console.log(foo);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+define({message:"Hello, Foo!"});

@@ -1,0 +1,1 @@
+define("foo",{message:"Hello, Foo!"}),define("bar",{message:"Hello, Bar!"}),define("primary",function(){});
