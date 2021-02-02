@@ -1,0 +1,2 @@
+This example will not work without a server. 
+See https://github.com/requirejs/text#configuration.

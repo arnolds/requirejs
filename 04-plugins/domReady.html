@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Plugins</title>	
+	<script src="js/require.js"></script>
+</head>
+<body>	
+	<script>
+		require.config({
+			baseUrl: 'js'
+		});
+
+		require([
+			'domReady'
+		], function (domReady) {
+			domReady(function () {
+				console.log('The DOM has loaded.');
+			});
+		});
+
+		require([
+			'domReady!'
+		], function (domReady) {
+			console.log('The DOM has loaded, no wrapper needed.');
+		});
+	</script>
+</body>
+</html>
